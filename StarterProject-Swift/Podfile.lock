@@ -1,0 +1,12 @@
+PODS:
+  - WalinnsAPI-Swift (1.0.1)
+
+DEPENDENCIES:
+  - WalinnsAPI-Swift
+
+SPEC CHECKSUMS:
+  WalinnsAPI-Swift: 929d1edf902fd0041f28dc42535215281e5a2c4e
+
+PODFILE CHECKSUM: 7c147e2f4cc75c92a37366d7f255ee20baa2ccfe
+
+COCOAPODS: 1.4.0

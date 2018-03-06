@@ -1,0 +1,6 @@
+framework module WalinnsAPI {
+  umbrella header "WalinnsAPI.h"
+
+  export *
+  module * { export * }
+}

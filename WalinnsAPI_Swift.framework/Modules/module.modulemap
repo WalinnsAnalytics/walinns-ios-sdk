@@ -1,0 +1,4 @@
+framework module WalinnsAPI_Swift {
+    header "WalinnsAPI_Swift-Swift.h"
+    requires objc
+}
