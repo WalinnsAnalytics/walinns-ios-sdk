@@ -22,45 +22,54 @@ For more information check out our [website](https://walinns.com "Walinns") and 
 
     [Sign up](https://walinns.com/signup) for a free account.  
     
-2.  Install the SDK
-### Android Studio / Gradle     
+2.  Install the SDK using CocoPods
+    
+    add the following to your podfile. 
+    
+    ## Objective C    
+
+        target 'YOUR_TARGET_NAME' do  
+           pod 'WalinnsAPI'  
+        end     
         
-    We publish the sdk to jcenter and mavenCentral as an `aar` file. Just declare it as dependency in your `build.gradle` file.     
+    ## Swift
+
+        target 'YOUR_TARGET_NAME' do  
+           pod 'WalinnsAPI-Swift'
+        end 
         
-        dependencies {      
-            compile 'com.walinns.walinnsapi:WalinnsApi:1.0.5'     
-        }       
-
-    ### Manual Install
-
-    Copy the included WalinnsAndroidSDK.jar file to your projects libs directory. Add this JAR file as a dependency for your Android app project.
-    
-  3. Add Your Walinns Project Credentials
- 
- Paste the below code snippet outside the <application></application> tags. 
- 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.GET_TASKS"/>
-
-    add the following inside the `<application>
-    
-    <service android:name="com.walinns.walinnsapi.WAService" android:enabled="true" android:exported="true"></service>
-    
-    </application>` tags of your AndroidManifest.xml:. 
+    Then run pod install
   
+  3. Adding the following to your Info.plist
+ 
+     * Open the info.plist file
+     * Add the Key called App Transport Security Settings as Dictionary (Dictionary should be the default type)
+     * Add the Subkey called Allow Arbitrary Loads as Boolean (Boolean should be the default type). Set it to YES
+     
+        ==add the plist image
+ 
+      
     
     
   4. Initialize the Walinns SDK 
   
-In the onCreate() of your main activity, add the below code snippet and replace your "PROJECT_TOKEN" with your token created in step 1.
+In the viewDidLoad() of your main ViewController, add the below code snippet and replace your "PROJECT_TOKEN" with your token created in step 1.
   
-    WalinnsAPI.getInstance().initialize(this,"PROJECT_TOKEN");
-  
+   ## Objective C 
+   
+    #import <WalinnsAPI/WalinnsAPI.h>
     
-   5. Documentation 
+    [[WalinnsApi instance]initializeToken:@"PROJECT_TOKEN"];
+    
+  ## Swift
+  
+    import "WalinnsAPI_Swift"
+    
+    WalinnsApi.initialize(project_token:"PROJECT_TOKEN")
+    
+   Build and run the Project.
+          
+  5. Documentation 
    
    Please see our [full documentation here](https://walinns.com/docs.html) for more information how to track sessions, screen name and events. 
    
