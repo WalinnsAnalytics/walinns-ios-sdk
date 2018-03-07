@@ -53,7 +53,7 @@ For more information check out our [website](https://walinns.com "Walinns") and 
     
   4. Initialize the Walinns SDK 
   
-In the viewDidLoad() of your main ViewController, add the below code snippet and replace your "PROJECT_TOKEN" with your token created in step 1.
+     In the viewDidLoad() of your main ViewController, add the below code snippet and replace your "PROJECT_TOKEN" with your      token created in step 1.
   
    ## Objective C 
    
