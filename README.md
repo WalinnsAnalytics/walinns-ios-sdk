@@ -1,7 +1,7 @@
 [![Walinns Logo](https://walinns.com/wp-content/uploads/2018/02/walinns.png)](https:walinns.com)
 
 
-Walinns Android SDK  
+Walinns iOS SDK  
 
 Real-time Mobile Analytics Platform. Walinns helps the app marketers to analyze and measure how users are using your mobile apps. 
 
@@ -46,7 +46,7 @@ For more information check out our [website](https://walinns.com "Walinns") and 
      * Add the Key called App Transport Security Settings as Dictionary (Dictionary should be the default type)
      * Add the Subkey called Allow Arbitrary Loads as Boolean (Boolean should be the default type). Set it to YES
      
-        ==add the plist image
+       [![info-plist](https://walinns.com/wp-content/uploads/2018/03/app_transport.png)]
  
       
     
